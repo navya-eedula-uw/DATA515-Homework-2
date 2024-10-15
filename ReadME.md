@@ -19,7 +19,7 @@ You are also expected to write a short reflection on the project that focuses on
 
 2. The population data is available in CSV format as [population_by_country_AUG.2024.csv](https://drive.google.com/file/d/1PlBRdx1t2eSCymXmOqtWXFJPiMn_gTQS/view?usp=sharing) from the homework folder. This dataset was downloaded from the [world population data sheet](https://www.prb.org/international/indicator/population/table/) published by the Population Reference Bureau.
 
-The `population_by_country_AUG.2024.csv` contains rows that provide cumulative regional population counts. These rows are distinguished by having ALL CAPS values in the 'geography' field (e.g. AFRICA, OCEANIA). These rows should not match the country values in `politicians_by_country.AUG.2024.csv`, but you will want to retain them so that you can report coverage and quality by region as specified in the analysis section below.
+The [population_by_country_AUG.2024.csv](https://github.com/navya-eedula-uw/DATA515-Homework-2/blob/main/politicians_by_country_AUG.2024.csv) contains rows that provide cumulative regional population counts. These rows are distinguished by having ALL CAPS values in the 'geography' field (e.g. AFRICA, OCEANIA). These rows should not match the country values in [politicians_by_country.AUG.2024.csv](https://github.com/navya-eedula-uw/DATA515-Homework-2/blob/main/population_by_country_AUG.2024.csv), but you will want to retain them so that you can report coverage and quality by region as specified in the analysis section below.
 
 # API Documentation
 ### MediaWiki PageInfo API
@@ -112,3 +112,23 @@ The analysis suggests that internet access, digital literacy, and language skill
 
 Question: **How might a researcher supplement or transform this dataset to potentially correct for the limitations/biases you observed?**
 A researcher could address these biases by incorporating additional data on internet access and digital literacy rates to better understand regional disparities in Wikipedia contributions. Including information on English proficiency and analyzing data from non-English Wikipedia versions would provide a more comprehensive view of global coverage, mitigating biases toward English-speaking countries. Additionally, integrating socio-political context metrics, such as press freedom and political openness, could explain variations in article coverage and offer a deeper understanding of regional constraints. Lastly, cross-wiki analysis, including translations of articles from other language Wikipedias, could enrich the dataset with diverse perspectives, leading to a more balanced representation of political figures globally.
+
+### File Structure
+
+code_references/
+├── wp_ores_liftwing_example.ipynb
+├── wp_page_info_example.ipynb
+
+generated_files/
+├── articles_ores_scores.csv
+├── articles_page_info.json
+
+generated_output/
+├── wp_countries-no_match.txt
+├── wp_politicians_by_country.csv
+
+ReadME.md
+LICENSE
+politicians_by_country_AUG.2024.csv
+population_by_country_AUG.2024.csv
+wikipedia_politicians_analysis.ipynb
