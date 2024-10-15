@@ -67,12 +67,33 @@ Also, keep in mind that the `population_by_country_AUG.2024.csv` file provides p
 
 6.  Geographic regions by high quality coverage: Rank ordered list of geographic regions (in descending order) by high quality articles per capita.
 
+# Output Files
+1. [wp_countries-no_match.txt](https://github.com/navya-eedula-uw/DATA515-Homework-2/blob/main/generated_output/wp_countries-no_match.txt):
+This is a text file containing a list of countries that are present in the population file but not in the politician file, and vice versa.
+
+2. [wp_politicians_by_country.csv](https://github.com/navya-eedula-uw/DATA515-Homework-2/blob/main/generated_output/wp_politicians_by_country.csv)  
+CSV file Schema:      
+| **Column**        | **Description**                                              |
+|-------------------|--------------------------------------------------------------|
+| `country`         | The name of the country.                                      |
+| `region`          | The region where the country is located.                      |
+| `population`      | The population (in millions) of the country.                  |
+| `article_title`   | The title of the Wikipedia article related to the country.    |
+| `revision_id`     | The revision ID of the article on Wikipedia.                  |
+| `article_quality` | The quality rating of the Wikipedia article (e.g., Start, B). |
+
 # Summary of Results
 The analysis of Wikipedia coverage per capita across countries reveals significant disparities. For questions 1 and 2, the top 10 countries by article coverage show smaller nations, like **Antigua and Barbuda** with 330 articles per million people, leading the pack, indicating a high ratio of Wikipedia articles to population size. On the other hand, larger countries like **China**, with only 0.011 articles per million people, rank among the bottom 10, illustrating a vast gap in coverage. This suggests that countries with smaller populations or more active contributors tend to have higher article counts per capita, while barriers such as language, internet access, and emphasis on Wikipedia contributions may hinder coverage in larger nations.
 
 In questions 3 and 4, focusing on high-quality articles (FA or GA status), we observe a similar trend. **Montenegro** leads with 5 high-quality articles per million people, indicating robust content curation and editing efforts. **Slovenia** rounds out the top 10 with 0.95 high-quality articles per million people. At the bottom of the list, **Bangladesh** has only 0.0058 high-quality articles per million people, reflecting a lack of detailed, well-researched content. The availability of high-quality articles often correlates with active, engaged contributor communities or editorial focus, while countries at the bottom may face challenges like fewer contributors or resource limitations for in-depth curation.
 
 When shifting focus to geographic regions in questions 5 and 6, the **Caribbean** emerges as the region with the highest total Wikipedia article coverage, boasting 2,190 articles per million people. In contrast, **East Asia** shows minimal representation with only 0.108 articles per million people. The same pattern holds for high-quality articles, where the Caribbean again leads with 90 high-quality articles per million people, while East Asia lags with just 0.0021 high-quality articles per million people. Regions like the Caribbean may benefit from smaller populations and active local communities, whereas regions like East Asia may face challenges with fewer contributors to English Wikipedia, despite their larger populations.
+
+# Special Cases and Data Issues
+1. In the [politicians_by_country.AUG.2024.csv](https://drive.google.com/file/d/1UZ9QUYQ1R2T3Nzau85ToSNkvEzXwLUtf/view?usp=sharing) dataset, there were 41 articles for which the article names were duplicated, however, I realised that these were politicians with same names from different countries. This was appropriately handled.
+2. To assign region to a country, the hierarchical structure of the respective CSV file was followed and the region of the lowest hierarchy was assigned.
+3. For some of the revision ID's the API was unable to retrieve a reponse. This error rate was 0.05%.
+4. In my analysis, I removed all countries that had a population of 0 to avoid infinity values in while doing the per capita analysis.
 
 # Usage Instructions
 1. Clone the repository:
@@ -132,5 +153,4 @@ LICENSE
 politicians_by_country_AUG.2024.csv
 population_by_country_AUG.2024.csv
 wikipedia_politicians_analysis.ipynb
-```
 ```
