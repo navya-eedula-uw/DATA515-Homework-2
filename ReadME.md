@@ -114,7 +114,7 @@ Question: **How might a researcher supplement or transform this dataset to poten
 A researcher could address these biases by incorporating additional data on internet access and digital literacy rates to better understand regional disparities in Wikipedia contributions. Including information on English proficiency and analyzing data from non-English Wikipedia versions would provide a more comprehensive view of global coverage, mitigating biases toward English-speaking countries. Additionally, integrating socio-political context metrics, such as press freedom and political openness, could explain variations in article coverage and offer a deeper understanding of regional constraints. Lastly, cross-wiki analysis, including translations of articles from other language Wikipedias, could enrich the dataset with diverse perspectives, leading to a more balanced representation of political figures globally.
 
 ### File Structure
-
+```
 code_references/
 ├── wp_ores_liftwing_example.ipynb
 ├── wp_page_info_example.ipynb
@@ -132,3 +132,5 @@ LICENSE
 politicians_by_country_AUG.2024.csv
 population_by_country_AUG.2024.csv
 wikipedia_politicians_analysis.ipynb
+```
+```
