@@ -72,7 +72,8 @@ Also, keep in mind that the `population_by_country_AUG.2024.csv` file provides p
 This is a text file containing a list of countries that are present in the population file but not in the politician file, and vice versa.
 
 2. [wp_politicians_by_country.csv](https://github.com/navya-eedula-uw/DATA515-Homework-2/blob/main/generated_output/wp_politicians_by_country.csv)  
-CSV file Schema:      
+CSV file Schema:    
+
 | **Column**        | **Description**                                              |
 |-------------------|--------------------------------------------------------------|
 | `country`         | The name of the country.                                      |
